@@ -46,7 +46,7 @@ export class EditComponent {
 
   editContact(): void {
     const contactData: Contact = {
-      id: 0,
+      id: Number(this.route.snapshot.paramMap.get('id')),
       firstName: this.contactForm.value.firstName,
       lastName: this.contactForm.value.lastName,
       street: this.contactForm.value.street,
