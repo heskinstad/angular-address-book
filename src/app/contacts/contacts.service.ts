@@ -8,5 +8,8 @@ import { CONTACTS } from "./data/contacts"
 export class ContactsService {
   public contacts: Contact[] = CONTACTS;
 
-  constructor() { }
+  public AddContact(contact: Contact): void {
+    contact.id = this.contacts.length + 1;
+    this.contacts.push(contact);
+  }
 }

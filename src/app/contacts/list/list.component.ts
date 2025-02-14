@@ -8,11 +8,11 @@ import { ContactsService } from '../contacts.service';
   templateUrl: './list.component.html',
   styleUrl: './list.component.css'
 })
+
 export class ListComponent {
   contacts: Contact[] = [];
 
   constructor(private readonly contactService: ContactsService) {
     this.contacts = this.contactService.contacts;
   }
-
 }
