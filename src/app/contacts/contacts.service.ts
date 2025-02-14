@@ -18,4 +18,12 @@ export class ContactsService {
     const beer = this.contacts.find((b) => b.id === id);
     return of(beer);
   }
+
+  public EditContact(updatedContact: Contact): void {
+    const contactId = this.contacts.findIndex(
+      (contact) => contact.id === updatedContact.id
+    );
+    if (contactId !== -1)
+      this.contacts[contactId] = updatedContact;
+  }
 }
